@@ -1,0 +1,100 @@
+*{
+    padding:0px;
+    margin:0px;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-family: "Handlee", cursive;
+}
+
+/* while using locomotive we will not give height to main div and we should 
+have main div */
+
+#loader{
+    left: 50%;
+    transform: translateX(-50%);
+    /* font-family: "Satisfy", cursive; */
+    /* font-family: "Send Flowers", cursive; */
+    font-family: "Julee", cursive;
+    width: 100%;
+    gap: 2vw;
+    height: 100%;
+    position: fixed;
+    z-index: 999;
+    background-color: #0b0b0b;
+    padding: 10vw 18.6vw;
+}
+#loader .line{
+    /* margin-bottom: 5px; */
+    /* background-color: red; */
+    overflow:'hidden',
+    
+}
+#loader .line h1{
+    display: flex;
+    font-size: 7vw;
+    font-weight: 700;
+    line-height: 19vh;
+    /* text-transform: uppercase; */
+}
+
+#main{
+    position: relative;
+    width: 100%;
+    background-color: #0b0b0b;
+}
+#page1{
+    width: 100%;
+    height: 100vh;
+    background-color: #151515;
+}
+#line-part1{
+    gap:2vw;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    
+}
+#line-part1 h5,#line-part1 h6{
+    font-size: 4vw;
+}
+#now{
+    animation-name: now;
+    animation-duration: 1s;
+    animation-delay: 0.5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    position: relative;
+    margin-left:2vw ;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    display: flex;    
+    font-size: 8vw;
+}
+#line-part1 h5{
+    width: 8vw;
+    /* background-color: red; */
+    text-align: right;
+    transition: linear ease all 0.1s;
+}
+
+@keyframes now {
+    0%{
+                font-family: "Julee", cursive;
+                opacity: 1; 
+    }
+    48%{
+                font-family: "Julee", cursive;
+                opacity: 50%;        
+    }
+    50%{
+    font-family: "Send Flowers", cursive;
+        opacity: 1;
+    }
+    98%{
+    font-family: "Send Flowers", cursive;
+        opacity: 50%;
+    }
+}
