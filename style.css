@@ -8,8 +8,10 @@ html,body{
     /* overflow: hidden; */
     height: 100%;
     color: #fff;
+    background-color: #151515;
     /* font-family: "Handlee", cursive; */
     font-family: "Kalam", cursive;
+    transition: all ease cubic-bezier(0.075, 0.82, 0.165, 1) 0.3;
 
 }
 
@@ -105,7 +107,7 @@ have main div */
     }
     48%{
                 font-family: "Julee", cursive;
-                opacity: 50%;        
+                opacity: 30%;        
     }
     50%{
     font-family: "Send Flowers", cursive;
@@ -117,7 +119,7 @@ have main div */
     font-family: "Send Flowers", cursive;
     /* font-family: "Julee", cursive; */
 
-        opacity: 50%;
+        opacity: 30%;
     }
 }
 #nav{
@@ -135,6 +137,12 @@ have main div */
 }
 #nav-1{
     font-family: "Grape Nuts", cursive;
+    color: greenyellow;
+
+}
+.logo{
+    font-family: "Grape Nuts", cursive;
+    color: greenyellow;
 
 }
 #nav-2{
@@ -161,7 +169,99 @@ have main div */
 
 }
 .hero span:hover{
-    color:transparent;
-    -webkit-text-stroke:1px #fff;
+    color:white;
+    -webkit-text-stroke:1px #09ff00;
     font-weight: 900;
+}
+
+.hero span{
+    color: #dadadab0;
+}
+
+#page2{
+    width:100%;
+    height:60vh;
+    background-color: #151515;
+    /* background-color: red; */
+}
+#page2 #videoContainer{
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 150vh;
+    height: 60vh;
+    /* background-color: orange; */
+    transform: translateX(-50%);
+    left: 50%;
+}
+#page2 #videoContainer video{
+    width: 0%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    
+}
+#page3{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    background-color: skyblue;
+}
+#page4{
+    width: 100%;
+    min-height: 100vh;
+    position: relative;
+    background-color: #151515;
+}
+#page4 h1{
+    font-size: 5vw;
+    gap: 2vw;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+}
+#page4 span{
+    margin-top: -2.8vh;
+}
+#page4Content{  
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 79vh;
+    /* background-color: orangered; */
+}
+#page4 img{
+    position: relative;
+    bottom: -5vh;
+    border-radius: 30vh;
+    width: 50vh;
+    height: 79vh;
+    object-fit: cover;
+    display: inline-block;
+    object-position: center;
+}
+#page4 #p2{
+    margin-top: 2vh;
+    font-size: 3vh;
+    bottom:  28vh;
+    position: relative;
+    display: inline-block;
+    width: 66%;
+    font-size: 4vh;
+    /* background-color: rebeccapurple; */
+}
+#page4 #p1{
+    font-size: 3vh;
+    bottom:  33vh;
+    position: relative;
+    display: inline-block;
+    width: 66%;
+    font-size: 4vh;
+    /* background-color: rebeccapurple; */
+}
+
+p{
+    font-family: 'Handlee',cursive;
 }
