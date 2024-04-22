@@ -3,82 +3,65 @@
     margin:0px;
     box-sizing: border-box;
 }
+
 html,body{
     width: 100%;
-    /* overflow: hidden; */
     height: 100%;
     color: #fff;
     background-color: #151515;
-    /* font-family: "Handlee", cursive; */
     font-family: "Kalam", cursive;
     transition: all ease cubic-bezier(0.075, 0.82, 0.165, 1) 0.3;
-
+    scroll-behavior: smooth;
 }
 
-/* while using locomotive we will not give height to main div and we should 
-have main div */
 
-/* #cursor{
-    transform: translate(-50%,-50%);
-    height: 2.5vw;
-    width: 2.5vw;
-    background:linear-gradient(to left ,transparent, rgba(255, 255, 255, 0.342));
-    z-index: 999;
-    mix-blend-mode: difference;
-    border-color:rgba(255, 255, 255, 0.555) ;
-    position: fixed;
-    border:1px solid rgba(255, 255, 255, 0.445);
-    border-radius: 50%;
-} */
-
-#loader{
-    left: 60%;
-    transform: translateX(-50%);
-    /* font-family: "Satisfy", cursive; */
-    /* font-family: "Send Flowers", cursive; */
+#loader {
+    left: 50%;
+    top: 50%; /* Center the loader vertically */
+    transform: translate(-50%, -50%); /* Center the loader horizontally */
     font-family: "Julee", cursive;
     width: 100%;
     gap: 2vw;
     height: 100%;
-    position: fixed;
+    position: absolute; /* Change from fixed to absolute */
     z-index: 999;
-    /* background-color: #ff0f0f; */
     padding: 10vw 13.6vw;
 }
 #loader .line{
-    /* margin-bottom: 5px; */
     overflow: hidden;
-    /* background-color: red; */
-    
 }
+
 #loader .line h1{
     display: flex;
     font-size: 7vw;
     font-weight: 700;
     line-height: 19vh;
-    /* text-transform: uppercase; */
 }
 
 #main{
     position: relative;
     width: 100%;
-    background-color: #0b0b0b;
+    height: 100%;
+    background-color: #151515;
 }
+
 #page1{
     width: 100%;
     height: 100vh;
     background-color: #151515;
 }
+
 #line-part1{
     gap:2vw;
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    
 }
+
 #line-part1 h5,#line-part1 h6{
     font-size: 4vw;
 }
+
 #now{
     animation-name: now;
     animation-duration: 2s;
@@ -88,42 +71,36 @@ have main div */
     position: relative;
     margin-left:2vw ;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
-    display: flex;    
+    display: flex;
     font-size: 7vw;
 }
+
 #line-part1 h5{
     width: 8vw;
-    /* background-color: red; */
     text-align: right;
     transition: linear ease all 0.1s;
 }
 
 @keyframes now {
     0%{
-                font-family: "Julee", cursive;
-    /* font-family: "Send Flowers", cursive; */
-
-                opacity: 1; 
+        font-family: "Julee", cursive;
+        opacity: 1; 
     }
     48%{
-                font-family: "Julee", cursive;
-                opacity: 30%;        
+        font-family: "Julee", cursive;
+        opacity: 30%;        
     }
     50%{
-    font-family: "Send Flowers", cursive;
-    /* font-family: "Julee", cursive; */
-
+        font-family: "Send Flowers", cursive;
         opacity: 1;
     }
     98%{
-    font-family: "Send Flowers", cursive;
-    /* font-family: "Julee", cursive; */
-
+        font-family: "Send Flowers", cursive;
         opacity: 30%;
     }
 }
+
 #nav{
-    /* margin-top: 3vh; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -131,20 +108,18 @@ have main div */
     height: 10vh;
     padding: 4vw 2vw;
     font-size: 4vh;
-    /* font-family: "Sacramento", cursive; */
-    /* font-family: "Rock Salt", cursive; */
-    /* background-color: royalblue; */
 }
+
 #nav-1{
     font-family: "Grape Nuts", cursive;
     color: greenyellow;
-
 }
+
 .logo{
     font-family: "Grape Nuts", cursive;
     color: greenyellow;
-
 }
+
 #nav-2{
     display: flex;
     gap: 3vw;
@@ -152,22 +127,23 @@ have main div */
     align-items: center;
     font-size: 2.5vh;
 }
+
 .hero{
     overflow: hidden;
-    /* background-color: skyblue; */
     width: 90%;
     text-transform: uppercase;
     margin-left: 5%;
     line-height: 12vh;
 }
+
 .hero h1{
     font-size:5vw;
-
 }
+
 .hero:nth-child(2){
     margin-top: 6.5%;
-
 }
+
 .hero span:hover{
     color:white;
     -webkit-text-stroke:1px #09ff00;
@@ -178,37 +154,37 @@ have main div */
     color: #dadadab0;
 }
 
-#page2{
-    width:100%;
-    height:60vh;
-    background-color: #151515;
-    /* background-color: red; */
-}
-#page2 #videoContainer{
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 150vh;
+#page2 {
+    width: 100%;
     height: 60vh;
-    /* background-color: orange; */
-    transform: translateX(-50%);
-    left: 50%;
+    background-color: #151515;
+    position: relative;
+    overflow: hidden;
 }
-#page2 #videoContainer video{
-    width: 0%;
+
+#page2 #videoContainer {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+}
+
+#page2 #videoContainer video {
+    width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    
 }
 
 #page4{
     width: 100%;
-    min-height: 100vh;
+    height: 100%;
     position: relative;
     background-color: #151515;
-    /* background-color: orange; */
 }
+
 #page4 h1{
     font-size: 10vw;
     top: 40vh;
@@ -220,17 +196,19 @@ have main div */
     justify-content: center;
     align-items: center;
 }
+
 #page4 span{
     margin-top: -2.8vh;
 }
+
 #page4Content{  
     position: relative;
     left: 50%;
     transform: translateX(-50%);
     width: 80%;
     height: 79vh;
-    /* background-color: orangered; */
 }
+
 #page4 img{
     position: relative;
     bottom:  70vh;
@@ -243,6 +221,7 @@ have main div */
     display: inline-block;
     object-position: center;
 }
+
 #page4 #p2{
     font-size: 10vw;
     bottom:  138vh;
@@ -250,11 +229,10 @@ have main div */
     position: relative;
     display: inline-block;
     width: 66%;
-    /* background-color: rebeccapurple; */
     font-size: 4vh;
 }
-#page4 #p1{
 
+#page4 #p1{
     font-size: 10vw;
     bottom:  10vh;
     left: 100vw;
@@ -262,66 +240,67 @@ have main div */
     display: inline-block;
     width: 66%;
     font-size: 4vh;
-    /* background-color: rebeccapurple; */
 }
 
 p{
     font-family: 'Handlee',cursive;
 }
-#page5{
+
+#page5 {
     width: 100%;
-    min-height: 10vh;
+    height: 2vh;
     background-color: #151515;
-    /* background-color: #09ff00; */
     padding: 7vw 0vw;
+    overflow: hidden;
+    /* background-color: red; */
 }
-#page5 .elem{
+
+#page5 .elem {
     margin-top: 2vh;
     overflow-x: hidden;
     white-space: nowrap;
-    /* background-color: rebeccapurple; */
+    display: flex;
+    justify-content: flex-start;
 }
-#page5 .elem h1{
-    -webkit-text-stroke:0.5vh #0066ff;
+
+#page5 .elem h1 {
+    -webkit-text-stroke: 0.5vh #0066ff;
     display: inline-block;
     color: transparent;
     font-weight: 900;
     font-size: 10vh;
     text-transform: uppercase;
-    animation-name: anime;
-    animation-delay: 1s;
-    animation-duration: 10s;
-    animation-timing-function: linear;
-    animation-iteration-count: infinite;
-    transition: linear all ease 0.1s;
-
+    animation: anime 10s linear infinite;
 }
 
 @keyframes anime {
-    from{
-        transform: translate(0%);
+    from {
+        transform: translateX(0%);
     }
-    to{
-        transform: translate(calc(-100% - -90vh));
+    to {
+        transform: translateX(calc(-100% - 90vh));
     }
 }
+
+
 #page3{
     position: relative;
     width: 100%;
-    min-height: 100vh;
-    background-color: skyblue;
+    height: 100vh;
+    background-color:#151515;
 }
+
 #page3 h1{
-    margin-top: 5vh;
+    margin-top: 10vh;
     font-weight: 900;
     font-size: 10vh;
     text-transform: uppercase;
     position: relative;
     left: 5%;
-    /* transform: translateX(-50%); */
 }
+
 #image-div-container{
-    background-color: red;
+    /* background-color: red; */
     padding: 1vw;
     position: relative;
     display: flex;
@@ -330,6 +309,7 @@ p{
     justify-content: space-between;
     flex-wrap: wrap;
 }
+
 .image-div{
     flex-shrink: 0;
     position: relative;
@@ -337,9 +317,10 @@ p{
     height:33vw;
     width: 24vw;
     border-radius: 10vh;
-    background-color: blue;
+    /* background-color: blue; */
     margin-top: 5vw;
 }
+
 .image-div img{
     position: relative;
     margin:5vw;
@@ -359,4 +340,91 @@ p{
     height: 20vw;
     border-radius: 50%;
     border: 2px solid #dadadab0;
+}
+
+
+footer {
+    width: 100%;
+    height: 5vh;
+    background-color: #1f1f1f;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 1.6vh;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+footer a {
+    text-decoration: none;
+    color: #66ccff;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+#page5 {
+    position: relative;
+    width: 100%;
+    bottom: -70vh;
+    height: fit-content;
+    background-color: #151515;
+    padding: 7vw 0vw;
+    overflow: hidden;
+}
+
+#page5 .elem {
+    margin-top: 2vh;
+    overflow-x: hidden;
+    white-space: nowrap;
+    display: flex;
+    justify-content: flex-start;
+}
+
+#page5 .elem h1 {
+    -webkit-text-stroke: 0.5vh #0066ff;
+    display: inline-block;
+    color: transparent;
+    font-weight: 900;
+    font-size: 10vh;
+    text-transform: uppercase;
+    animation: anime 10s linear infinite;
+}
+
+@keyframes anime {
+    from {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(calc(-100% - 90vh));
+    }
+}
+
+
+
+::-webkit-scrollbar {
+    display: none;
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #888;
+    color: transparent;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
 }
